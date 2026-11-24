@@ -95,14 +95,14 @@ The second combo box lists only the units of the chosen region; `Reset()` in the
     Properties:
       BorderColor: =fxColorBorderInteractive
       Color: =fxColorTextPrimary
-      DisplayFields: =["Result"]
+      DisplayFields: =["Value"]
       FocusedBorderColor: =fxColorPrimary
       Height: =fxFilterHeight
       InputTextPlaceholder: ="Region"
       IsSearchable: =false
       Items: =Distinct(colUnidadesEscopo, Regiao)
       OnChange: =Reset('xx-cbo-unidade-filtrada')
-      SearchFields: =["Result"]
+      SearchFields: =["Value"]
       SelectMultiple: =false
       Width: =160
       X: =20
@@ -116,7 +116,7 @@ The second combo box lists only the units of the chosen region; `Reset()` in the
       FocusedBorderColor: =fxColorPrimary
       Height: =fxFilterHeight
       InputTextPlaceholder: ="Unit"
-      Items: =Filter(colUnidadesEscopo, IsBlank('xx-cbo-regiao'.Selected) || Regiao = 'xx-cbo-regiao'.Selected.Result)
+      Items: =Filter(colUnidadesEscopo, IsBlank('xx-cbo-regiao'.Selected) || Regiao = 'xx-cbo-regiao'.Selected.Value)
       OnChange: =Set(varUnidadeFiltro, Coalesce(Self.Selected.Sigla, If(varTodasUnidades, "", varUnidadeLotacao)))
       SearchFields: =["Sigla"]
       SelectMultiple: =false

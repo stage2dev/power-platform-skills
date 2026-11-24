@@ -53,7 +53,7 @@ Misturar os dois não parseia. Todo bloco de código numa skill ou num documento
 
 | # | Decisão |
 |---|---|
-| T1 | Layout **ManualLayout + controles Classic**, canvas fixo (1920×1080 nos projetos de referência). AutoLayout/Modern ficam fora do padrão até um projeto provar no Studio. |
+| T1 | Layout **ManualLayout + controles Classic**, **responsivo** de 1280×720 a 2560×1440 (*Dimensionar para ajustar* desligado, `Parent.*` e tokens, conteúdo até o rodapé; `powerapps-canvas/references/layout-responsivo.md`). Era canvas fixo 1920×1080 até 2026-11 (GestaoObras ADR-002). AutoLayout/Modern ficam fora do padrão até um projeto provar no Studio. |
 | T2 | `Control: Tipo@versão` **com** a versão exata já usada no app. |
 | T3 | Cor, fonte e tamanho só por token `fx*` (named formulas). Nada de `RGBA(` literal em tela. |
 | T4 | Propriedade nova só se o app já a usa naquele tipo de controle (o Studio recusa o bloco inteiro com PA2108). |

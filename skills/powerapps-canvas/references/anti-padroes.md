@@ -204,3 +204,4 @@ uma trilha ativa por camada, declarada em `trilha_dados` (decisão A4).
 | T018 | AVISO | `.Run(` sem `IfError(` |
 | T020 | AVISO | não é tela YAML, ignorado |
 | T022 | ERRO | chave de topo fora do schema |
+| T023 | AVISO | `Result` em tabela de valor único (o nome é `Value`) |

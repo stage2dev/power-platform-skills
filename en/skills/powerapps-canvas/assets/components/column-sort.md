@@ -37,12 +37,18 @@ xx-hdr-gal-data  (Button)
 
 ## YAML
 
+**Table header rounded only at the ends:** the 1st column has a radius only on the left (`RadiusTopLeft`/`RadiusBottomLeft`), the last only on the right, the middle ones `0`. Four rounded corners on every column turn into loose "pills"; no `Radius*` inherits the button default radius. Here `data` stays square because the Actions column comes after it.
+
 Destination: YAML pasted into Studio (`,` between arguments, `;` chains, `.` decimal). Paste in Code view > Paste code, with the screen (or a container) as parent; change the `xx` prefix before pasting, because a control name is unique across the whole app.
 
 ```yaml
 - xx-hdr-gal-codigo:
     Control: Classic/Button@2.2.0
     Properties:
+      RadiusBottomLeft: =fxBtnRadius
+      RadiusBottomRight: =0
+      RadiusTopLeft: =fxBtnRadius
+      RadiusTopRight: =0
       Color: =fxColorTableHeaderText
       Fill: =fxColorTableHeaderBg
       Font: =fxFont
@@ -68,6 +74,10 @@ Destination: YAML pasted into Studio (`,` between arguments, `;` chains, `.` dec
 - xx-hdr-gal-data:
     Control: Classic/Button@2.2.0
     Properties:
+      RadiusBottomLeft: =0
+      RadiusBottomRight: =0
+      RadiusTopLeft: =0
+      RadiusTopRight: =0
       Color: =fxColorTableHeaderText
       Fill: =fxColorTableHeaderBg
       Font: =fxFont

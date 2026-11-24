@@ -239,6 +239,10 @@ HaTrintaDias: =DateAdd(Today(), -30, TimeUnit.Days)
 - Booleano do SQL (`BIT`) é booleano no Power Fx: `Flg_Encerrar` é `true`/`false`, nunca `= 1`.
   Dentro de `Filter` delegado, `= true` e `<> true` excluem linha `NULL`; por isso o `BIT` deve
   ser `NOT NULL DEFAULT 0` (pedido ao dono do banco, skill `sql-procedures`).
+- Tabela de valor único (`Split`, `Distinct`, `Sequence`, `["A", "B"]`, `ForAll` que devolve
+  valor e não registro) tem a coluna **`Value`**, nunca `Result` (nome antigo, retirado):
+  `First(Split(x, ";")).Value`, `Filter(Split(x, ";"), Len(Value) > 0)`,
+  `DisplayFields: =["Value"]`, `'xx-cbo'.Selected.Value`. Validador: **T023**.
 - Nunca `Choices()` em fonte SQL: não há option set. Lista literal para domínio fixo
   (`["A", "B"]`) ou coleção para domínio de tabela.
 

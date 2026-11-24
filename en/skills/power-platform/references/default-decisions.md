@@ -53,7 +53,7 @@ Mixing the two does not parse. Every code block in a skill or a document states 
 
 | # | Decision |
 |---|---|
-| T1 | **ManualLayout + Classic controls** layout, fixed canvas (1920×1080 in the reference projects). AutoLayout/Modern stay outside the default until a project proves it in Studio. |
+| T1 | **ManualLayout + Classic controls** layout, **responsive** from 1280×720 to 2560×1440 (*Scale to fit* off, `Parent.*` and tokens, content down to the footer; `powerapps-canvas/references/responsive-layout.md`). It was a fixed 1920×1080 canvas until 2026-11 (GestaoObras ADR-002). AutoLayout/Modern stay outside the default until a project proves it in Studio. |
 | T2 | `Control: Type@version` **with** the exact version already used in the app. |
 | T3 | Color, font and size only through `fx*` tokens (named formulas). No literal `RGBA(` on a screen. |
 | T4 | A new property only if the app already uses it on that control type (Studio rejects the whole block with PA2108). |

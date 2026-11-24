@@ -37,12 +37,18 @@ xx-hdr-gal-data  (Button)
 
 ## YAML
 
+**Cabeçalho da tabela arredondado só nas pontas:** a 1ª coluna tem raio só à esquerda (`RadiusTopLeft`/`RadiusBottomLeft`), a última só à direita, as do meio `0`. Os quatro cantos arredondados em toda coluna viram "pílulas" soltas; nenhum `Radius*` herda o raio padrão do botão. Aqui `data` fica reto porque a coluna Ações vem depois.
+
 Destino: YAML colado no Studio (`,` entre argumentos, `;` encadeia, `.` decimal). Cole em Code view > Paste code, com a tela (ou um contêiner) como pai; troque o prefixo `xx` antes de colar, porque nome de controle é único no app inteiro.
 
 ```yaml
 - xx-hdr-gal-codigo:
     Control: Classic/Button@2.2.0
     Properties:
+      RadiusBottomLeft: =fxBtnRadius
+      RadiusBottomRight: =0
+      RadiusTopLeft: =fxBtnRadius
+      RadiusTopRight: =0
       Color: =fxColorTableHeaderText
       Fill: =fxColorTableHeaderBg
       Font: =fxFont
@@ -68,6 +74,10 @@ Destino: YAML colado no Studio (`,` entre argumentos, `;` encadeia, `.` decimal)
 - xx-hdr-gal-data:
     Control: Classic/Button@2.2.0
     Properties:
+      RadiusBottomLeft: =0
+      RadiusBottomRight: =0
+      RadiusTopLeft: =0
+      RadiusTopRight: =0
       Color: =fxColorTableHeaderText
       Fill: =fxColorTableHeaderBg
       Font: =fxFont

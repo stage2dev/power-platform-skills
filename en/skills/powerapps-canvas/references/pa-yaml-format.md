@@ -378,7 +378,8 @@ The pattern is in [ux-components.md](ux-components.md) §Gallery.
 
 ## 9. Layout: ManualLayout and AutoLayout
 
-This kit's standard: **ManualLayout + Classic controls, fixed 1920x1080 canvas** (decision T1: it was
+This kit's standard: **ManualLayout + Classic controls, responsive layout** ([responsive-layout.md](responsive-layout.md);
+the fixed 1920x1080 canvas of decision T1 is now legacy: it was
 what the reference apps proved in Studio). AutoLayout and modern controls stay out until a project
 proves them. Responsiveness comes from a token (`fxIsCompact`), not from AutoLayout.
 

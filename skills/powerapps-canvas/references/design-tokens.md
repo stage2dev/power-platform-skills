@@ -125,7 +125,8 @@ Piso para rótulo de formulário: 12. Rótulo menor que o valor do campo inverte
 
 ## 6. Layout e grid
 
-Canvas fixo **1920 por 1080**, ManualLayout (decisão T1). Faixas verticais típicas:
+Layout **responsivo** (regras em [layout-responsivo.md](layout-responsivo.md)); a tabela abaixo é o
+legado do canvas fixo 1920 por 1080 (decisão T1), só para ler telas antigas. Faixas verticais:
 
 | Faixa | Y | Altura |
 |---|---:|---:|

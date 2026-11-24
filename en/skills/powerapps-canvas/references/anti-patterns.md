@@ -204,3 +204,4 @@ one active track per layer, declared in `trilha_dados` (decision A4).
 | T018 | WARNING | `.Run(` without `IfError(` |
 | T020 | WARNING | not a YAML screen, ignored |
 | T022 | ERROR | top-level key outside the schema |
+| T023 | WARNING | `Result` on a single-value table (the name is `Value`) |
