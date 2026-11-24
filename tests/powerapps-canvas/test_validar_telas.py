@@ -66,6 +66,7 @@ ESPERADOS = [
     ("aviso-zorder.md", "T016", "AVISO"),
     ("aviso-run-sem-iferror.md", "T018", "AVISO"),
     ("erro-chave-topo.md", "T022", "ERRO"),
+    ("aviso-result.md", "T023", "AVISO"),
 ]
 
 

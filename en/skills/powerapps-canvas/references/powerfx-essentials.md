@@ -240,6 +240,10 @@ HaTrintaDias: =DateAdd(Today(), -30, TimeUnit.Days)
 - A SQL boolean (`BIT`) is a boolean in Power Fx: `Flg_Encerrar` is `true`/`false`, never `= 1`.
   Inside a delegated `Filter`, `= true` and `<> true` exclude a `NULL` row; that is why the `BIT` must
   be `NOT NULL DEFAULT 0` (a request to the database owner, `sql-procedures` skill).
+- A single-value table (`Split`, `Distinct`, `Sequence`, `["A", "B"]`, a `ForAll` that returns
+  a value, not a record) has the column **`Value`**, never `Result` (old, retired name):
+  `First(Split(x, ";")).Value`, `Filter(Split(x, ";"), Len(Value) > 0)`,
+  `DisplayFields: =["Value"]`, `'xx-cbo'.Selected.Value`. Validator: **T023**.
 - Never `Choices()` on a SQL source: there is no option set. A literal list for a fixed domain
   (`["A", "B"]`) or a collection for a table domain.
 

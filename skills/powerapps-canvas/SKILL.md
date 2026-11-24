@@ -147,7 +147,7 @@ quando ela é carregada.
 
 | Comando | O que checa | Exit |
 |---|---|---|
-| `python <pasta-da-skill>/scripts/validar-telas.py <arquivo-ou-pasta>` | parse com linha (T001), `=` (T002), `Control@versão` (T003 a T005), nome duplicado (T006), `;;` (T007), PA2108 (T008), `RGBA(` (T009), kebab-case (T010), `in`/`Search` (T011), chave repetida (T012), `.Run(` sem `IfError` (T018), z-order (T016) | 0 sem erro, 1 com erro, 2 uso incorreto |
+| `python <pasta-da-skill>/scripts/validar-telas.py <arquivo-ou-pasta>` | parse com linha (T001), `=` (T002), `Control@versão` (T003 a T005), nome duplicado (T006), `;;` (T007), PA2108 (T008), `RGBA(` (T009), kebab-case (T010), `in`/`Search` (T011), chave repetida (T012), `.Run(` sem `IfError` (T018), `Result` no lugar de `Value` (T023), z-order (T016) | 0 sem erro, 1 com erro, 2 uso incorreto |
 | `python <pasta-da-skill>/scripts/validar-telas.py --trilha sql-server <pasta>` | acrescenta `CountRows`/`CountIf` sem delegação (T013) | idem |
 | `python <pasta-da-skill>/scripts/validar-telas.py --codigos` | lista os códigos | 0 |
 

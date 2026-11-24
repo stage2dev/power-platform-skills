@@ -111,6 +111,9 @@ CODIGOS = {
     "T020": tr(
         "arquivo ou bloco que não é tela YAML — ignorado",
         "file or block that is not a YAML screen — ignored"),
+    "T023": tr(
+        "coluna `Result` de tabela de valor único: o nome atual é `Value`",
+        "`Result` column of a single-value table: the current name is `Value`"),
     "T022": tr(
         "chave de topo fora do schema (App, Screens, ComponentDefinitions, ...)",
         "top-level key outside the schema (App, Screens, ComponentDefinitions, ...)"),
@@ -390,6 +393,14 @@ def regras_formula(bruta: str, chave: str, cfg: Config) -> list[tuple[str, str, 
             "tratamento (references/chamada-flow.md)",
             "`.Run(` outside `IfError(`: a transport failure goes unhandled "
             "(references/flow-call.md)")))
+    if re.search(r"(?<![\w'])\.?Result\b", f) or '"Result"' in bruta:
+        saida.append(("T023", "AVISO", tr(
+            "`Result` em tabela de valor único (`Split`, `Distinct`, `Sequence`, `[...]`, "
+            "`ForAll` sem registro): a coluna se chama `Value` "
+            "(references/powerfx-essencial.md §6)",
+            "`Result` on a single-value table (`Split`, `Distinct`, `Sequence`, `[...]`, "
+            "`ForAll` without a record): the column is named `Value` "
+            "(references/powerfx-essentials.md §6)")))
     saida += achados_colunas(bruta, chave, cfg)
     return saida
 

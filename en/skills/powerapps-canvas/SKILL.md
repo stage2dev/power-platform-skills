@@ -148,7 +148,7 @@ when the skill is loaded.
 
 | Command | What it checks | Exit |
 |---|---|---|
-| `python <skill-folder>/scripts/validar-telas.py <file-or-folder>` | parse with line (T001), `=` (T002), `Control@version` (T003 to T005), duplicate name (T006), `;;` (T007), PA2108 (T008), `RGBA(` (T009), kebab-case (T010), `in`/`Search` (T011), repeated key (T012), `.Run(` without `IfError` (T018), z-order (T016) | 0 no errors, 1 with errors, 2 wrong usage |
+| `python <skill-folder>/scripts/validar-telas.py <file-or-folder>` | parse with line (T001), `=` (T002), `Control@version` (T003 to T005), duplicate name (T006), `;;` (T007), PA2108 (T008), `RGBA(` (T009), kebab-case (T010), `in`/`Search` (T011), repeated key (T012), `.Run(` without `IfError` (T018), `Result` instead of `Value` (T023), z-order (T016) | 0 no errors, 1 with errors, 2 wrong usage |
 | `python <skill-folder>/scripts/validar-telas.py --trilha sql-server <folder>` | adds `CountRows`/`CountIf` without delegation (T013) | same |
 | `python <skill-folder>/scripts/validar-telas.py --codigos` | lists the codes | 0 |
 
