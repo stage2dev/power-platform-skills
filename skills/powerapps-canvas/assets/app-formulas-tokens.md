@@ -16,7 +16,7 @@ encadeamento `;;`, decimal `,`. O mesmo conteúdo, colado num `.pa.yaml`, não p
 - Só constante e derivado de constante. Named formula **nunca** lê variável global
   (`Set`): ela só recalcula quando um insumo dela muda, e um `Refresh()` não a reexecuta.
 - Sem função de comportamento (`Set`, `Collect`, `Navigate`, `Notify`): proibido em `Formulas`.
-- Paleta neutra (rampa azul padrão do Fluent 2) — troque pela marca do projeto e recalcule o contraste (`references/design-tokens.md` §3); medidas para canvas 1920x1080. Projeto com outra marca
+- Paleta neutra (rampa azul padrão do Fluent 2) — troque pela marca do projeto e recalcule o contraste (`references/design-tokens.md` §3); medidas para layout responsivo de 1280×720 a 2560×1440 (`references/layout-responsivo.md`). Projeto com outra marca
   troca os valores, não os nomes. Contraste conferido: texto sobre fundo >= 4,5:1;
   borda de controle interativo >= 3:1 `[verificado: cálculo WCAG 2.x]`.
 - O alfa fracionário do `RGBA` usa vírgula decimal na barra pt-BR (`0,5`); no YAML seria `0.5`.
@@ -79,7 +79,8 @@ fxBadgeNeutralBg = RGBA(206; 212; 218; 1);;
 
 // ---------- LAYOUT: um breakpoint, tudo deriva dele ----------
 fxIsCompact = App.Width < 1600;;
-fxLayoutMargin = If(fxIsCompact; 40; 100);;
+fxLarguraMinDesktop = 1280;;
+fxLayoutMargin = If(fxIsCompact; 24; 32);;
 fxLayoutGutter = If(fxIsCompact; 8; 16);;
 fxRowHeight = If(fxIsCompact; 40; 50);;
 fxTableHeaderHeight = If(fxIsCompact; 35; 50);;
@@ -168,7 +169,11 @@ fxMsgSalvoComSucesso = "Registro salvo com sucesso.";;
 
 // ---------- COMPONENTES (assets/componentes/) ----------
 // altura da faixa do cabeçalho de tela (usado em: cabecalho-tela, card-kpi, abas, barra-filtros, seletor-unidade, modal-formulario)
-fxHeaderHeight = 100;;
+fxHeaderHeight = 64;;
+// rodapé (contador, paginação) e área de conteúdo entre cabeçalho e rodapé (layout-responsivo.md §4)
+fxFooterHeight = 32;;
+fxContentTop = fxHeaderHeight + fxLayoutGutter;;
+fxContentHeight = Max(App.Height; App.MinScreenHeight) - fxContentTop - fxFooterHeight - fxLayoutGutter;;
 // largura do menu lateral fixo (usado em: menu-lateral)
 fxMenuWidth = If(fxIsCompact; 220; 260);;
 // altura de cada item do menu lateral (usado em: menu-lateral)

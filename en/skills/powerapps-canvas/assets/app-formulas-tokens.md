@@ -17,7 +17,7 @@ decimal, so the same text does not parse there; see
 - Only constants and values derived from constants. A named formula **never** reads a global
   variable (`Set`): it only recalculates when one of its inputs changes, and a `Refresh()` does not re-run it.
 - No behavior function (`Set`, `Collect`, `Navigate`, `Notify`): forbidden in `Formulas`.
-- Neutral palette (default Fluent 2 blue ramp): swap in the project brand and recalculate the contrast (`references/design-tokens.md` §3); sizes for a 1920x1080 canvas. A project with another brand
+- Neutral palette (default Fluent 2 blue ramp): swap in the project brand and recalculate the contrast (`references/design-tokens.md` §3); sizes for a responsive layout from 1280×720 to 2560×1440 (`references/responsive-layout.md`). A project with another brand
   changes the values, not the names. Contrast checked: text on background >= 4.5:1;
   border of an interactive control >= 3:1 `[verified: WCAG 2.x calculation]`.
 - The fractional alpha of `RGBA` uses a decimal point in the en-US bar (`0.5`); a pt-BR bar would need a decimal comma (`0,5`).
@@ -80,7 +80,8 @@ fxBadgeNeutralBg = RGBA(206, 212, 218, 1);
 
 // ---------- LAYOUT: one breakpoint, everything derives from it ----------
 fxIsCompact = App.Width < 1600;
-fxLayoutMargin = If(fxIsCompact, 40, 100);
+fxLarguraMinDesktop = 1280;
+fxLayoutMargin = If(fxIsCompact, 24, 32);
 fxLayoutGutter = If(fxIsCompact, 8, 16);
 fxRowHeight = If(fxIsCompact, 40, 50);
 fxTableHeaderHeight = If(fxIsCompact, 35, 50);
@@ -169,7 +170,11 @@ fxMsgSalvoComSucesso = "Record saved successfully.";
 
 // ---------- COMPONENTS (assets/components/) ----------
 // height of the screen header strip (used in: screen-header, kpi-card, tabs, filter-bar, unit-selector, form-modal)
-fxHeaderHeight = 100;
+fxHeaderHeight = 64;
+// footer (counter, paging) and content area between header and footer (responsive-layout.md §4)
+fxFooterHeight = 32;
+fxContentTop = fxHeaderHeight + fxLayoutGutter;
+fxContentHeight = Max(App.Height, App.MinScreenHeight) - fxContentTop - fxFooterHeight - fxLayoutGutter;
 // width of the fixed side menu (used in: side-menu)
 fxMenuWidth = If(fxIsCompact, 220, 260);
 // height of each side menu item (used in: side-menu)

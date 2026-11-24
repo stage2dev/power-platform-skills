@@ -67,9 +67,10 @@ Source file conventions (`.pa.yaml` in `.md`):
 
 ## 3. Layout
 
-- **ManualLayout with absolute `X`/`Y`, 1920 by 1080 canvas.** It is not a preference: it is what the
-  canonical blocks assume (`X: =Parent.Width - Self.Width - 20`).
-- Responsiveness by a **conditional token** (`fxIsCompact`), not by AutoLayout.
+- **Responsive ManualLayout**: `X`/`Y`/`Width`/`Height` from `Parent.*` and tokens, never literals;
+  content down to the footer. Rules in [responsive-layout.md](responsive-layout.md) (replaces the
+  fixed 1920 by 1080 canvas).
+- Density by a **conditional token** (`fxIsCompact`), not by AutoLayout.
 - Centering by formula: `X: =(Parent.Width - Self.Width) / 2`.
 - A modal's button pair sizes itself: `Width: =(Parent.Width - fxModalPadding * 3) / 2`.
   Never a magic width.

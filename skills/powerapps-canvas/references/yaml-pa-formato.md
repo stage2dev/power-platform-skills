@@ -376,7 +376,8 @@ O padrão está em [ux-componentes.md](ux-componentes.md) §Galeria.
 
 ## 9. Layout: ManualLayout e AutoLayout
 
-Padrão deste kit: **ManualLayout + controles Classic, canvas fixo 1920x1080** (decisão T1: foi o
+Padrão deste kit: **ManualLayout + controles Classic, layout responsivo** ([layout-responsivo.md](layout-responsivo.md);
+o canvas fixo 1920x1080 da decisão T1 ficou como legado: foi o
 que os apps de referência provaram no Studio). AutoLayout e controles modernos ficam fora até um projeto
 prová-los. Responsividade vem de token (`fxIsCompact`), não de AutoLayout.
 

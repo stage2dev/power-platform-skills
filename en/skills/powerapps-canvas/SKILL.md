@@ -8,8 +8,8 @@ user-invocable: true
 # Power Apps Canvas
 
 Produces and reviews Canvas screens as **`.pa.yaml` YAML you can paste into Studio** and Power Fx
-in the right dialect for the destination. Default: ManualLayout + Classic controls, 1920x1080
-canvas, `fx*` tokens, writes always through a flow. The kit's decided defaults (app and flow
+in the right dialect for the destination. Default: ManualLayout + Classic controls, responsive layout
+(1280×720 to 2560×1440, [responsive-layout.md](references/responsive-layout.md)), `fx*` tokens, writes always through a flow. The kit's decided defaults (app and flow
 contract, separators, screens, names) are in
 [default-decisions.md](../power-platform/references/default-decisions.md); this skill applies them.
 
@@ -66,6 +66,7 @@ contract, separators, screens, names) are in
 | auto-refresh, debounce, polling, toast that won't go away | [timers-async.md](references/timers-async.md) |
 | button that writes (calls a flow) | [flow-call.md](references/flow-call.md) |
 | role, unit, "sees another unit's data" | [scope-and-permission.md](references/scope-and-permission.md) |
+| width, height, screen that clips or leaves gaps, table header | [responsive-layout.md](references/responsive-layout.md) |
 | color, font, size, messages | [design-tokens.md](references/design-tokens.md), `assets/app-formulas-tokens.md` |
 | `OnStart` and globals | `assets/app-onstart-template.md` |
 | contrast, focus, screen reader | [accessibility.md](references/accessibility.md) |
@@ -126,6 +127,7 @@ that Studio will reject.
 | [scope-and-permission.md](references/scope-and-permission.md) | flags by role, fail-closed, `""` = all, write unit |
 | [ux-components.md](references/ux-components.md) | corrected block catalog (header, filters, gallery, buttons) |
 | [ux-feedback.md](references/ux-feedback.md) | modal, loading, toast |
+| [responsive-layout.md](references/responsive-layout.md) | responsive screen: width, height down to the footer, filters, long text, before pasting |
 | [design-tokens.md](references/design-tokens.md) | `fx*` families, contrast, typography, grid, messages |
 | [accessibility.md](references/accessibility.md) | WCAG AA checklist and platform limits |
 | [naming.md](references/naming.md) | control, variable, collection, token, flow |

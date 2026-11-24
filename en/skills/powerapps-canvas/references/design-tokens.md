@@ -125,7 +125,8 @@ Floor for a form label: 12. A label smaller than the field value inverts the hie
 
 ## 6. Layout and grid
 
-Fixed **1920 by 1080** canvas, ManualLayout (decision T1). Typical vertical bands:
+**Responsive** layout (rules in [responsive-layout.md](responsive-layout.md)); the table below is the
+legacy fixed 1920 by 1080 canvas (decision T1), only for reading old screens. Vertical bands:
 
 | Band | Y | Height |
 |---|---:|---:|

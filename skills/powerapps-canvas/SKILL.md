@@ -8,7 +8,7 @@ user-invocable: true
 # Power Apps Canvas
 
 Produz e revisa telas Canvas como **YAML `.pa.yaml` colável no Studio** e Power Fx no dialeto
-certo para o destino. Padrão: ManualLayout + controles Classic, canvas 1920x1080, tokens `fx*`,
+certo para o destino. Padrão: ManualLayout + controles Classic, layout responsivo (de 1280×720 a 2560×1440, [layout-responsivo.md](references/layout-responsivo.md)), tokens `fx*`,
 escrita sempre por flow. Os padrões decididos do kit (contrato app e flow, separadores, telas,
 nomes) estão em
 [decisoes-padrao.md](../power-platform/references/decisoes-padrao.md); esta skill os aplica.
@@ -65,6 +65,7 @@ nomes) estão em
 | auto-refresh, debounce, polling, toast que não some | [timers-async.md](references/timers-async.md) |
 | botão que grava (chama flow) | [chamada-flow.md](references/chamada-flow.md) |
 | perfil, unidade, "vê dado de outra unidade" | [escopo-e-permissao.md](references/escopo-e-permissao.md) |
+| largura, altura, tela que corta ou sobra, cabeçalho de tabela | [layout-responsivo.md](references/layout-responsivo.md) |
 | cor, fonte, medida, mensagens | [design-tokens.md](references/design-tokens.md), `assets/app-formulas-tokens.md` |
 | `OnStart` e globais | `assets/app-onstart-molde.md` |
 | contraste, foco, leitor de tela | [acessibilidade.md](references/acessibilidade.md) |
@@ -125,6 +126,7 @@ o Studio vai recusar.
 | [escopo-e-permissao.md](references/escopo-e-permissao.md) | flags por perfil, fail-closed, `""` = todas, unidade de gravação |
 | [ux-componentes.md](references/ux-componentes.md) | catálogo de blocos corrigido (cabeçalho, filtros, galeria, botões) |
 | [ux-feedback.md](references/ux-feedback.md) | modal, loading, toast |
+| [layout-responsivo.md](references/layout-responsivo.md) | tela responsiva: largura, altura até o rodapé, filtros, texto longo, antes de colar |
 | [design-tokens.md](references/design-tokens.md) | famílias `fx*`, contraste, tipografia, grid, mensagens |
 | [acessibilidade.md](references/acessibilidade.md) | checklist WCAG AA e limites da plataforma |
 | [nomenclatura.md](references/nomenclatura.md) | controle, variável, coleção, token, flow |
