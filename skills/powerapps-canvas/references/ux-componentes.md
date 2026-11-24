@@ -399,6 +399,8 @@ focável, não clicável), numa paleta só.
 - `Items` delegável ([delegacao.md](delegacao.md)); empty state por `AllItemsCount`.
 - Altura de linha que expande para detalhe inline: `TemplateSize` condicional, não um número
   fixo que quebra o painel.
+- Cabeçalho: raio só nas pontas (1ª coluna à esquerda, última à direita, meio `0`); ver
+  [galeria-tabela](../assets/componentes/galeria-tabela.md).
 - Tabela 2D acessível só com o Data Table clássico; galeria com labels não constrói tabela
   semântica para leitor de tela.
 

@@ -399,6 +399,8 @@ focusable, not clickable), in a single palette.
 - Delegable `Items` ([delegation.md](delegation.md)); empty state by `AllItemsCount`.
 - A row height that expands for inline detail: conditional `TemplateSize`, not a fixed
   number that breaks the panel.
+- Header: radius only at the ends (1st column on the left, last on the right, middle `0`); see
+  [table-gallery](../assets/components/table-gallery.md).
 - A 2D table is accessible only with the classic Data Table; a gallery with labels does not build a
   semantic table for a screen reader.
 
